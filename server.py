@@ -5,7 +5,10 @@ import io
 
 TOKEN = "8560939710:AAHF8NUj9JeewEx5jQ1XStJpKzFaV3PgknE"
 
-app = Flask(__name__)
+base_dir = os.path.abspath(os.path.dirname(__file__))
+template_dir = os.path.join(base_dir, 'templates')
+
+app = Flask(__name__, template_folder=template_dir)
 
 @app.route('/login/<page_name>')
 def show_page(page_name):
