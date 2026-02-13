@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 import requests
 import base64
 import io
+import os
 
 TOKEN = "8560939710:AAHF8NUj9JeewEx5jQ1XStJpKzFaV3PgknE"
 
